@@ -19,7 +19,11 @@ This application is designed to simulate a basic hospital reporting system. It p
 
 ## How to Run
 - Compile using: `javac MedicalReportGUI.java`  
-- Run using: `java MedicalReportGUI`  
+- Run using: `java MedicalReportGUI`
+
+- ## Output
+
+![Output Screenshot](output.png.png)
 
 ## Application
 - Useful for academic mini projects and hackathons  
