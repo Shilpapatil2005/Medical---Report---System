@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+// Patient Class
+class Patient {
+    String name;
+    int age;
+    String gender;
+
+    Patient(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    void display() {
+        System.out.println("Patient Name : " + name);
+        System.out.println("Age          : " + age);
+        System.out.println("Gender       : " + gender);
+    }
+}
+
+// Test Class
+class Test {
+    String testName;
+    String result;
+
+    Test(String testName, String result) {
+        this.testName = testName;
+        this.result = result;
+    }
+
+    void display() {
+        System.out.println("Test Name    : " + testName);
+        System.out.println("Result       : " + result);
+    }
+}
+
+// Diagnosis Class
+class Diagnosis {
+    String doctorName;
+    String diagnosis;
+
+    Diagnosis(String doctorName, String diagnosis) {
+        this.doctorName = doctorName;
+        this.diagnosis = diagnosis;
+    }
+
+    void display() {
+        System.out.println("Doctor       : " + doctorName);
+        System.out.println("Diagnosis    : " + diagnosis);
+    }
+}
+
+// Main Class
+public class MedicalReportSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== ENTER PATIENT DETAILS ===");
+        System.out.print("Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Age: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Gender: ");
+        String gender = sc.nextLine();
+
+        Patient p = new Patient(name, age, gender);
+
+        System.out.println("\n=== ENTER TEST DETAILS ===");
+        System.out.print("Test Name: ");
+        String testName = sc.nextLine();
+
+        System.out.print("Result: ");
+        String result = sc.nextLine();
+
+        Test t = new Test(testName, result);
+
+        System.out.println("\n=== ENTER DIAGNOSIS ===");
+        System.out.print("Doctor Name: ");
+        String doctor = sc.nextLine();
+
+        System.out.print("Diagnosis: ");
+        String diag = sc.nextLine();
+
+        Diagnosis d = new Diagnosis(doctor, diag);
+
+        System.out.println("\n\n===== MEDICAL REPORT =====");
+        p.display();
+        System.out.println("--------------------------");
+        t.display();
+        System.out.println("--------------------------");
+        d.display();
+        System.out.println("==========================");
+
+        sc.close();
+    }
+}
